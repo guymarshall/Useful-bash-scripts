@@ -3,15 +3,15 @@
 # Define paths and names
 downloads_path="$HOME/Downloads"
 programming_folder="Programming"
-script_name="cargo-clean-all.sh"
 archive_date=$(date '+%Y.%m.%d')
 archive_name="$archive_date.7z"
 
 # Step 1: Navigate into the Programming directory
 cd "$downloads_path/$programming_folder" || exit
 
-# Step 2: Run the cargo-clean-all.sh script
-./"$script_name"
+# Step 2: Run the cleanup scripts
+./cargo-clean-all.sh
+./dotnet-clean-all.sh
 
 # Step 3: Navigate out of the Programming directory
 cd "$downloads_path" || exit
