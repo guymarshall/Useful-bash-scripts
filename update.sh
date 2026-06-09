@@ -12,5 +12,12 @@ fi
 if command -v flatpak &> /dev/null; then
     flatpak update -y
 else
-    echo "'flatpak' is not installed. Skipping update."
+    echo "'flatpak' is not installed. Update skipped."
+fi
+
+if command -v rustup &> /dev/null; then
+    rustup update
+    rustup self update
+else
+    echo "'rustup' is not installed. Update skipped."
 fi
